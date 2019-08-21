@@ -27,6 +27,54 @@ def get_data():
 					"type": "doctype",
 					"name": "Upload Attendance",
 					"hide_count": True
+				},
+				{
+					"type": "doctype",
+					"name": "Background Verification",
+				},
+				{
+					"type": "doctype",
+					"name": "Block",
+				},
+				{
+					"type": "doctype",
+					"name": "Caste",
+				},
+				{
+					"type": "doctype",
+					"name": "City",
+				},
+				{
+					"type": "doctype",
+					"name": "Cluster",
+				},
+				{
+					"type": "doctype",
+					"name": "Disability Category",
+				},
+				{
+					"type": "doctype",
+					"name": "Unit",
+				},
+				{
+					"type": "doctype",
+					"name": "District",
+				},
+				{
+					"type": "doctype",
+					"name": "Reservation Category",
+				},
+				{
+					"type": "doctype",
+					"name": "Vertical",
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Visit",
+				},
+				{
+					"type": "doctype",
+					"name": "Visit Type",
 				}
 			]
 		},
@@ -69,6 +117,10 @@ def get_data():
 					"type": "doctype",
 					"name": "Leave Block List",
 				},
+				{
+					"type": "doctype",
+					"name": "Disciplinary Action",
+				}
 			]
 		},
 		{
@@ -242,11 +294,68 @@ def get_data():
 					"type": "doctype",
 					"name": "Job Offer",
 				},
+				{
+					"type": "doctype",
+					"name": "Internal Job Applicant",
+				},
+				{
+					"type": "doctype",
+					"name": "Job Type",
+				},
+				{
+					"type": "doctype",
+					"name": "Opening Term",
+				},
+				{
+					"type": "doctype",
+					"name": "Staffing Request",
+				},
+				{
+					"type": "doctype",
+					"name": "Qualification",
+				},
+				{
+					"type": "doctype",
+					"name": "Specialization",
+				}
+			]
+		},
+		{
+			"label": _("Recruitment"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "Interview Panel",
+				},
+				{
+					"type": "doctype",
+					"name": "Interview Round",
+				},
+				{
+					"type": "doctype",
+					"name": "Interview Schedule",
+				},
+				{
+					"type": "doctype",
+					"name": "Interview Details",
+				},
+				{
+					"type": "doctype",
+					"name": "Interview Selected Candidate",
+				}
 			]
 		},
 		{
 			"label": _("Training"),
 			"items": [
+				{
+					"type": "doctype",
+					"name": "Training Request"
+				},
+				{
+					"type": "doctype",
+					"name": "Training Topic"
+				},
 				{
 					"type": "doctype",
 					"name": "Training Program"
@@ -382,6 +491,50 @@ def get_data():
 					"name": "Vehicle Expenses",
 					"doctype": "Vehicle"
 				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Attendance Request Report",
+					"doctype": "Attendance Request"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Disciplinary Action Report",
+					"doctype": "Disciplinary Action"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Employee Visit Report",
+					"doctype": "Employee Visit"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Leave Report",
+					"doctype": "Leave Application"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Staffing Recruitment Report",
+					"doctype": "Staffing Recruitment"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Training Request",
+					"doctype": "Training Request"
+				},
+				{
+					"type": "report",
+					"is_query_report": False,
+					"name": "Job Applicant",
+					"doctype": "Job Applicant"
+				},
+				
+				
 
 			]
 		},
