@@ -30,51 +30,7 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Background Verification",
-				},
-				{
-					"type": "doctype",
-					"name": "Block",
-				},
-				{
-					"type": "doctype",
-					"name": "Caste",
-				},
-				{
-					"type": "doctype",
-					"name": "City",
-				},
-				{
-					"type": "doctype",
-					"name": "Cluster",
-				},
-				{
-					"type": "doctype",
-					"name": "Disability Category",
-				},
-				{
-					"type": "doctype",
-					"name": "Unit",
-				},
-				{
-					"type": "doctype",
-					"name": "District",
-				},
-				{
-					"type": "doctype",
-					"name": "Reservation Category",
-				},
-				{
-					"type": "doctype",
-					"name": "Vertical",
-				},
-				{
-					"type": "doctype",
 					"name": "Employee Visit",
-				},
-				{
-					"type": "doctype",
-					"name": "Visit Type",
 				}
 			]
 		},
@@ -116,10 +72,6 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Leave Block List",
-				},
-				{
-					"type": "doctype",
-					"name": "Disciplinary Action",
 				}
 			]
 		},
@@ -443,6 +395,54 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Staffing Plan",
+				},
+				{
+					"type": "doctype",
+					"name": "Background Verification",
+				},
+				{
+					"type": "doctype",
+					"name": "Block",
+				},
+				{
+					"type": "doctype",
+					"name": "Caste",
+				},
+				{
+					"type": "doctype",
+					"name": "City",
+				},
+				{
+					"type": "doctype",
+					"name": "Cluster",
+				},
+				{
+					"type": "doctype",
+					"name": "Disability Category",
+				},
+				{
+					"type": "doctype",
+					"name": "Unit",
+				},
+				{
+					"type": "doctype",
+					"name": "District",
+				},
+				{
+					"type": "doctype",
+					"name": "Reservation Category",
+				},
+				{
+					"type": "doctype",
+					"name": "Vertical",
+				},
+				{
+					"type": "doctype",
+					"name": "Visit Type",
+				},
+				{
+					"type": "doctype",
+					"name": "Disciplinary Action",
 				}
 			]
 		},
