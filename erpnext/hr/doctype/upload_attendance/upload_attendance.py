@@ -24,7 +24,6 @@ def get_template():
 	w = add_header(w)
 
 	w = add_data(w, args)
-
 	# write out response as a type csv
 	frappe.response['result'] = cstr(w.getvalue())
 	frappe.response['type'] = 'csv'
@@ -135,6 +134,64 @@ def upload():
 	for i, row in enumerate(rows[5:]):
 		if not row: continue
 		row_idx = i + 5
+		d = frappe._dict(zip(columns, row))
+
+		d["doctype"] = "Attendance"
+		if d.name:
+			d["docstatus"] = frappe.db.get_value("Attendance", d.name, "docstatus")
+
+		try:
+			check_record(d)
+			ret.append(import_doc(d, "Attendance", 1, row_idx, submit=True))
+		except AttributeError:
+			pass
+		except Exception as e:
+			error = True
+			ret.append('Error for row (#%d) %s : %s' % (row_idx,
+				len(row)>1 and row[1] or "", cstr(e)))
+			frappe.errprint(frappe.get_traceback())
+
+	if error:
+		frappe.db.rollback()
+	else:
+		frappe.db.commit()
+	return {"messages": ret, "error": error}
+
+@frappe.whitelist()
+def upload_attendance():
+	csv_opertions()
+	
+def csv_opertions():
+	
+	if not frappe.has_permission("Attendance", "create"):
+		raise frappe.PermissionError
+
+	from frappe.utils.csvutils import read_csv_content_from_uploaded_file
+	from frappe.modules import scrub
+
+	rows = read_csv_content_from_uploaded_file()
+	rows = list(filter(lambda x: x and any(x), rows))
+	if not rows:
+		msg = [_("Please select a csv file")]
+		return {"messages": msg, "error": msg}
+
+	columns = [f for f in rows[0]]
+	columns[0] = "attendance_date"
+	columns[2] = "employee"
+	columns[10] = "check_in"
+	columns[11] = "check_out"
+	columns[12] = "working_hours"
+	columns[13] = "late_minutes"
+	columns[15] = "status"
+	
+	ret = []
+	error = False
+
+	from frappe.utils.csvutils import check_record, import_doc
+
+	for i, row in enumerate(rows[1:]):
+		if not row: continue
+		row_idx = i + 1
 		d = frappe._dict(zip(columns, row))
 
 		d["doctype"] = "Attendance"

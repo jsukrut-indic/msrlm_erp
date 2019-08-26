@@ -29,6 +29,20 @@ erpnext.hr.AttendanceControlPanel = frappe.ui.form.Controller.extend({
 			});
 	},
 
+	sync_attendance: function() {
+		var me = this;
+		var $wrapper = $(cur_frm.fields_dict.sync_attendance.wrapper).empty();
+
+		//upload
+		frappe.upload.make({
+			parent: $wrapper,
+			args: {
+				method: 'erpnext.hr.doctype.upload_attendance.upload_attendance.upload_attendance'
+			},
+		});
+	},
+
+
 	show_upload: function() {
 		var me = this;
 		var $wrapper = $(cur_frm.fields_dict.upload_html.wrapper).empty();
