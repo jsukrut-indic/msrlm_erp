@@ -51,9 +51,10 @@ class Attendance(Document):
 		if not emp:
 			frappe.throw(_("Employee {0} is not active or does not exist").format(self.employee))
 
+	# -------------------Validating Different types of leaves and can be configured as we like------------------
 	def validate(self):
 		from erpnext.controllers.status_updater import validate_status
-		validate_status(self.status, ["Present", "Absent", "On Leave", "Half Day"])
+		validate_status(self.status, ["Present", "Absent", "On Leave", "Half Day","Weekly Off"])
 		self.validate_attendance_date()
 		self.validate_duplicate_record()
 		self.check_leave_record()

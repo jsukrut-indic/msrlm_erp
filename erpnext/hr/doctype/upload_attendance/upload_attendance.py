@@ -157,12 +157,14 @@ def upload():
 		frappe.db.commit()
 	return {"messages": ret, "error": error}
 
+# ------------------Function to sync csv for uploading records-----------------------
 @frappe.whitelist()
 def upload_attendance():
 	csv_opertions()
 	
 def csv_opertions():
 	
+#------------------To import csv file on the doctype and validating it is in csv standard----------------- 
 	if not frappe.has_permission("Attendance", "create"):
 		raise frappe.PermissionError
 
@@ -175,9 +177,12 @@ def csv_opertions():
 		msg = [_("Please select a csv file")]
 		return {"messages": msg, "error": msg}
 
+# --------------Creating records for attendance from the csv provided to us----------------------------
+	
 	columns = [f for f in rows[0]]
 	columns[0] = "attendance_date"
-	columns[2] = "employee"
+	columns[1] = "employee"
+	columns[2] = "employee_name"
 	columns[10] = "check_in"
 	columns[11] = "check_out"
 	columns[12] = "working_hours"
@@ -187,6 +192,7 @@ def csv_opertions():
 	ret = []
 	error = False
 
+# -----------------checking for previous records creation and validation--------------------------
 	from frappe.utils.csvutils import check_record, import_doc
 
 	for i, row in enumerate(rows[1:]):
@@ -214,3 +220,5 @@ def csv_opertions():
 	else:
 		frappe.db.commit()
 	return {"messages": ret, "error": error}
+
+# --------------------Function Ends----------------------------------

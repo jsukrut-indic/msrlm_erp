@@ -1,0 +1,23 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2019-07-08 11:35:32.971734", 
+ "custom_format": 1, 
+ "default_print_language": "en", 
+ "disabled": 0, 
+ "doc_type": "Salary Slip", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "html": "<div class=\"container-fluid\">\n\t<div class=\"col-md-12\">\n\t\t <div id=\"header-html\">\n\t\t \t<div>\n         <h1><b><center>{{ doc.company }}</center></b></h1>\n\t<h3><center>CBD Belapur, Navi Mumbai - 400641 </center></h3>\n\t<h3><center>{{ frappe.db.get_value(\"Company\", doc.company, \"website\") }}</center></h3>\n\t<h3><b><center>Salary Slip</center></h3></p>\n\t<h3><b><center>{{ frappe.db.get_value(\"Employee\", doc.employee, \"employment_type\") }}</center></b></h3>\n\t<div align=\"center\"><p id=\"demo\"></p>\n\t<script>\n\tvar d = new Date();\n\tvar months=[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"];\ndocument.getElementById(\"demo\").innerHTML = months[d.getMonth()];\n\t</script>\n\t</div>\t\n\t</div>\n\t</div>\n</div>\n</div>\n<div>\n\t{{doc.earnings }} {{ doc.deductions }}\n</div>\n\n            </div>\n\n        </div>\n\n    </div>\n\n", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2019-07-09 13:32:34.724051", 
+ "modified_by": "Administrator", 
+ "module": "HR", 
+ "name": "Salary Slip", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}
