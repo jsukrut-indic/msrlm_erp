@@ -53,7 +53,7 @@ class Appraisal(Document):
 			frappe.throw(_("Total weightage assigned should be 100%. It is {0}").format(str(total_w) + "%"))
 
 		if frappe.db.get_value("Employee", self.employee, "user_id") != \
-				frappe.session.user and total == 0:
+				frappe.session.user and total == 0 and self.status != "Draft":
 			frappe.throw(_("Total cannot be zero"))
 
 		self.total_score = total
