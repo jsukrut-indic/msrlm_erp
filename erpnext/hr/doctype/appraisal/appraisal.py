@@ -52,6 +52,7 @@ class Appraisal(Document):
 		if int(total_w) != 100:
 			frappe.throw(_("Total weightage assigned should be 100%. It is {0}").format(str(total_w) + "%"))
 
+		#self.status != "Draft" added to save blank form and redirect to page
 		if frappe.db.get_value("Employee", self.employee, "user_id") != \
 				frappe.session.user and total == 0 and self.status != "Draft":
 			frappe.throw(_("Total cannot be zero"))
