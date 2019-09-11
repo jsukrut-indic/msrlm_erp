@@ -160,9 +160,9 @@ def upload():
 @frappe.whitelist()
 def upload_attendance():
 	csv_opertions()
-	
+
 def csv_opertions():
-	
+
 	if not frappe.has_permission("Attendance", "create"):
 		raise frappe.PermissionError
 
@@ -180,9 +180,6 @@ def csv_opertions():
 	columns[2] = "employee"
 	columns[10] = "check_in"
 	columns[11] = "check_out"
-	columns[12] = "working_hours"
-	columns[13] = "late_minutes"
-	columns[15] = "status"
 	
 	ret = []
 	error = False
