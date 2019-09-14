@@ -27,11 +27,11 @@ def get_data():
 					"type": "doctype",
 					"name": "Upload Attendance",
 					"hide_count": True
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Visit",
 				}
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Visit",
+				# }
 			]
 		},
 		{
@@ -81,52 +81,52 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Salary Structure Assignment",
-				},
-				{
-					"type": "doctype",
-					"name": "Salary Slip",
-				},
-				{
-					"type": "doctype",
-					"name": "Payroll Entry"
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Benefit Application",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Benefit Claim",
-				},
-				{
-					"type": "doctype",
-					"name": "Additional Salary",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Tax Exemption Declaration",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Tax Exemption Proof Submission",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Incentive",
-				},
-				{
-					"type": "doctype",
-					"name": "Retention Bonus",
-				},
+				}
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Salary Slip",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Payroll Entry"
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Benefit Application",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Benefit Claim",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Additional Salary",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Tax Exemption Declaration",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Tax Exemption Proof Submission",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Incentive",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Retention Bonus",
+				# },
 			]
 		},
 		{
 			"label": _("Payroll Setup"),
 			"items": [
-				{
-					"type": "doctype",
-					"name": "Payroll Period",
-				},
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Payroll Period",
+				# },
 				{
 					"type": "doctype",
 					"name": "Salary Component",
@@ -134,15 +134,15 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Salary Structure",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Tax Exemption Category",
-				},
-				{
-					"type": "doctype",
-					"name": "Employee Tax Exemption Sub Category"
 				}
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Tax Exemption Category",
+				# },
+				# {
+				# 	"type": "doctype",
+				# 	"name": "Employee Tax Exemption Sub Category"
+				# }
 			]
 		},
 		{
