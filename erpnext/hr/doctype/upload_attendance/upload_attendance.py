@@ -179,14 +179,12 @@ def csv_opertions():
 		return {"messages": msg, "error": msg}
 
 # --------------Creating records for attendance from the csv provided to us----------------------------
-	
 	columns = [f for f in rows[0]]
 	columns[0] = "attendance_date"
-	columns[1] = "employee"
+	columns[1] = "employee_code"
 	columns[2] = "employee_name"
 	columns[10] = "check_in"
 	columns[11] = "check_out"
-	
 	ret = []
 	error = False
 
@@ -199,6 +197,10 @@ def csv_opertions():
 		d = frappe._dict(zip(columns, row))
 
 		d["doctype"] = "Attendance"
+		if not d["check_in"]: 
+			continue
+		if not d["check_out"]: 
+			continue
 		if d.name:
 			d["docstatus"] = frappe.db.get_value("Attendance", d.name, "docstatus")
 
