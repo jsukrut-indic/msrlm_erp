@@ -1,0 +1,23 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2019-07-07 19:50:24.008370", 
+ "custom_format": 1, 
+ "default_print_language": "en", 
+ "disabled": 0, 
+ "doc_type": "Salary Slip", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "html": "<div class=\"container-fluid\">\n\t<div class=\"col-md-12\">\n\t\t <div id=\"header-html\">\n\t\t \t<div>\n         <h1><b><center>{{ doc.company }}</center></b></h1>\n\t<h3><center>CBD Belapur, Navi Mumbai - 400641 </center></h3>\n\t<h3><center>{{ frappe.db.get_value(\"Company\", doc.company, \"website\") }}</center></h3>\n\t<h3><b><center>Salary Slip</center></h3></p>\n\t<h3><b><center>{{ frappe.db.get_value(\"Employee\", doc.employee, \"employment_type\") }}</center></b></h3>\n\t<div align=\"center\"><p id=\"demo\"></p>\n\t<script>\n\tvar d = new Date();\n\tvar months=[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"];\ndocument.getElementById(\"demo\").innerHTML = months[d.getMonth()];\n\t</script>\n\t</div>\t\n\t</div>\n\t</div>\n</div>\n</div>\n<div class=\"col-xs-12\" style=\"margin-left: 45px;\">\n    <table>\n        <tr>\n            <td class=\"col-xs-4\" align=\"left\"><b>Name : {{ doc.employee_name }}</b> </td>\n            <td class=\"col-xs-4\"></td>\n        \t<td class=\"col-xs-4\" align=\"left\"><b>Designation : {{ doc.designation}}</b> </td>\n        </tr>\n\n        <tr>\n            <td class=\"col-xs-4\" align=\"left\"><b>Workings Days in the month :{{ doc.total_working_days }}</b> </td>\n            <td class=\"col-xs-4\"></td>\n        \t<td class=\"col-xs-4\" align=\"left\"><b>Salary Slip(From Date):{{ doc.start_date }}</b> </td>\n        </tr>\n        <tr>\n            <td class=\"col-xs-4\" align=\"left\"><b>Leave without pay :{{ doc.leave_without_pay}}</b> </td>\n            <td class=\"col-xs-4\"></td>\n        \t<td class=\"col-xs-4\" aiign=\"left\"><b>Salary Slip(To Date):{{ doc.end_date }}</b> </td>\n        </tr>\n       </table>\n   </div>\n    <div class=\"container\"  height=\"100%\">\n        <div class=\"row\">\n            <div class=\"col-xs-6\" style=\"margin-left: 60px;\">\n                <table class=\"table table-bordered\" align=\"center\">\n\n                <tr>\n                    <th class=\"col-xs-3\" >Earnings</th>\n                    <th class=\"col-xs-3\" >Amounts</th>\n                    <th class=\"col-xs-3\" >Deductions</th>\n                    <th class=\"col-xs-3\" >Amounts</th>\n                </tr>\n\n                <tr>\n                \t<td>Basic Pay</td>\n                \t<td> 15000</td>\n                \t<td> Income Tax</td>\n                \t<td> 1000</td>\n                </tr>\n\n                <tr>\n                \t<td>H.R.A</td>\n                \t<td> 1000</td>\n                \t<td>Professional Tax</td>\n                \t<td> 800</td>\n                </tr>\n\n                <tr>\n                \t<td>Medical Allowance</td>\n                \t<td>1500</td>\n                \t<td>Employee P.F.</td>\n                \t<td>1000</td>\n                </tr>\n\n                <tr>\n                \t<td>Travel Allowance</td>\n                \t<td>1500</td>\n                \t<td>Employers Contribution Towards P.F</td>\n                \t<td>1500</td>\n                </tr>\n\n                <tr>\n                \t<td>City Compensation</td>\n                \t<td>1500</td>\n                \t<td></td>\n                \t<td></td>\n                </tr>\n                <tr>\n                \t<td>Employers contribution Towards P.F.</td>\n                \t<td>1500</td>\n                \t<td></td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>Monthly CTC</td>\n                \t<td>21000</td>\n                \t<td>Total Deductions</td>\n                \t<td>4300</td>\n                </tr>\n                <tr>\n                \t<td colspan=\"3\" style=\"text-align:center;\">Net salary</td>\n                \t<td>16700</td>\n                </tr>\n\n\n                </table>\n            </div>\n\n        </div>\n\n    </div>\n\n", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2019-07-08 11:28:45.569969", 
+ "modified_by": "Administrator", 
+ "module": "HR", 
+ "name": "Salary Slip PB", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}

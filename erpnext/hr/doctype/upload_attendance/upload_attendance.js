@@ -29,6 +29,7 @@ erpnext.hr.AttendanceControlPanel = frappe.ui.form.Controller.extend({
 			});
 	},
 
+	// -----------------Function from Python for csv upload called---------------
 	sync_attendance: function() {
 		var me = this;
 		var $wrapper = $(cur_frm.fields_dict.sync_attendance.wrapper).empty();
@@ -41,7 +42,7 @@ erpnext.hr.AttendanceControlPanel = frappe.ui.form.Controller.extend({
 			},
 		});
 	},
-
+	//---------------------Function ends---------------------------------- 
 
 	show_upload: function() {
 		var me = this;

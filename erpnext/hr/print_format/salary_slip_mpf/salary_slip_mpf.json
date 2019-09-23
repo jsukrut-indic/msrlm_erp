@@ -1,0 +1,23 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2019-07-06 18:31:49.490863", 
+ "custom_format": 1, 
+ "default_print_language": "en", 
+ "disabled": 0, 
+ "doc_type": "Salary Slip", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "html": "<div class=\"container-fluid\">\n\t<div class=\"col-md-12\">\n\t\t <div id=\"header-html\">\n\t\t \t<div>\n         <h1><b><center>Maharashtra State Rural Livelihoods Mission</center></b></h1>\n\t<h3><b><center>CBD Belapur, Navi Mumbai - 400614</center></b></h3>\n\t<p><b><center>Salary Slip</center></b></p>\n\t<p><b><center>Employee on Contract Basis</center></b></p>\n    <p><b>Name :- {{ doc.employee_name }} <br>  Designation :- {{ doc.designation}} </b></p>\n    <p id=\"date\"><centre> Created on :-</centre>centre></p>\n\t\t<script>\n\t\tdocument.getElementById(\"date\").innerHTML = Date();\n\t\t</script>\n    </div>\n    </div>\n\t    </div>\n    </div>\n    <div class=\"container\"  height=\"100%\">\n        <div class=\"row\">\n            <div class=\"col-xs-6\">\n                <table class=\"table table-bordered\" >\n\n                <tr>\n                    <th class=\"col-xs-3\" >Salary Details</th>\n                    <th class=\"col-xs-3\" >Amounts</th>\n                    <th class=\"col-xs-3\" >Deductions</th>\n                    <th class=\"col-xs-3\" >Amounts</th>\n                </tr>\n\n                <tr>\n                \t<td>Basic Pay</td>\n                \t<td></td>\n                \t<td> Income Tax</td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>H.R.A</td>\n                \t<td></td>\n                \t<td>Professional Tax</td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>Medical Allowance</td>\n                \t<td></td>\n                \t<td>Employee P.F.</td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>Travel Allowance</td>\n                \t<td></td>\n                \t<td>Employers Contribution Towards P.F</td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>City Compensation</td>\n                \t<td></td>\n                \t<td></td>\n                \t<td></td>\n                </tr>\n                <tr>\n                \t<td>Employers contribution Towards P.F.</td>\n                \t<td></td>\n                \t<td></td>\n                \t<td></td>\n                </tr>\n\n                <tr>\n                \t<td>Monthly CTC</td>\n                \t<td></td>\n                \t<td>Total Deductions</td>\n                \t<td></td>\n                </tr>\n                <tr>\n                \t<td colspan=\"3\" style=\"text-align:center;\">Net salary</td>\n                \t<td></td>\n                </tr>\n\n\n                </table>\n            </div>\n\n        </div>\n\n    </div>\n\n", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2019-07-07 19:32:01.708277", 
+ "modified_by": "Administrator", 
+ "module": "HR", 
+ "name": "Salary Slip MPF", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}
