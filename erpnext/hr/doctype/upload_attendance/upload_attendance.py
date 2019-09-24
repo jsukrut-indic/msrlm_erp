@@ -197,9 +197,14 @@ def csv_opertions():
 		d = frappe._dict(zip(columns, row))
 
 		d["doctype"] = "Attendance"
-		if not d["check_in"]: 
+		if not d["check_in"]:
+			frappe.msgprint("Some records didn't submit because of incomplete information. Please check error log for details.")
+			frappe.log_error(frappe.get_traceback(), """Attendance for date '{0}' for employee '{1}' did not mark due to missing check_in or check_out""".format(d["attendance_date"],d["employee_name"]))
 			continue
-		if not d["check_out"]: 
+
+		if not d["check_out"]:
+			frappe.msgprint("Some records didn't submit because of incomplete information. Please check error log for details.")
+			frappe.log_error(frappe.get_traceback(), """Attendance for date '{0}' for employee '{1}' did not mark due to missing check_in or check_out""".format(d["attendance_date"],d["employee_name"]))
 			continue
 		if d.name:
 			d["docstatus"] = frappe.db.get_value("Attendance", d.name, "docstatus")
