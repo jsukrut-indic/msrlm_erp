@@ -86,10 +86,15 @@ frappe.ui.form.on("Leave Application", {
 				frm.set_value('employee', perm['Employee'].map(perm_doc => perm_doc.doc)[0]);
 			}
 		}
+
+		//show dashboard to approver and applicant
+		if(frm.doc.employee)
+		{
+			frm.trigger("make_dashboard");
+		}
 	},
 
 	employee: function(frm) {
-		frm.trigger("make_dashboard");
 		frm.trigger("get_leave_balance");
 		frm.trigger("set_leave_approver");
 	},
