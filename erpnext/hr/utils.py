@@ -113,7 +113,7 @@ def update_employee(employee, details, date=None, cancel=False):
 		elif fieldtype =="Datetime" and new_data:
 			new_data = get_datetime(new_data)
 		setattr(employee, item.fieldname, new_data)
-		if item.fieldname in ["department", "designation", "branch"]:
+		if item.fieldname in ["designation","district", "block", "cluster"]:
 			internal_work_history[item.fieldname] = item.new
 	if internal_work_history and not cancel:
 		internal_work_history["from_date"] = date
@@ -132,7 +132,7 @@ def get_employee_fields_label():
 		# 	"notice_number_of_days", "reports_to", "leave_policy", "company_email"]:
 		# 		fields.append({"value": df.fieldname, "label": df.label})
 
-		if df.fieldname in ["department", "designation","disctrict", "block"]:
+		if df.fieldname in ["designation","district", "block", "cluster"]:
 				fields.append({"value": df.fieldname, "label": df.label})
 	return fields
 
